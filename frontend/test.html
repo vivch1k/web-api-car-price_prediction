@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <h1>Car Price Prediction</h1>
+    <form method="post", action="/predict/">
+        <label for="year">Year:</label>
+        <input id="year" name="year" type="number"><br><br>
+
+        <label for="drivetrain">Drivetrain:</label>
+        <input id="drivetrain" name="drivetrain" type="text"><br><br>
+
+        <label for="transmission">Transmission:</label> 
+        <input id="transmission" name="transmission" type="text"><br><br>
+        
+        <label for="fueltype">Fuel type:</label>
+        <input id="fueltype" name="fueltype" type="text"><br><br>
+        
+        <label for="horsepower">Horsepower:</label>
+        <input id="horsepower" name="horsepower" type="number"><br><br>
+        
+        <label for="fueltank ">Fuel tank:</label>
+        <input id="fueltank" name="fueltank" type="number"><br><br>
+        
+        <button type="submit">Forecast</button>
+    </form>
+    
+    <div id="result">
+        <p>The approximate cost of the car: {{pred}} rub</p>
+    </div>
+</body>
+</html>
